@@ -1,0 +1,9 @@
+<p id="notice"><%= notice %></p>
+
+<% @conversation.messages.each do |message| %>
+<p><b><%= message.sender %></b>: <%= message.body %></p>
+<% end %>
+
+<%= render 'form' %>
+
+<%= link_to 'Back', conversations_path %>
